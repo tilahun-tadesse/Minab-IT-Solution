@@ -1,6 +1,8 @@
 <script setup>
   import { employee } from "~/use/employee";
+  const img = useImage();
   const teams = ref([]);
+  console.log(teams.value);
   onMounted(() => {
     teams.value = employee.slice(0, 6);
   });
@@ -40,6 +42,9 @@
                 ><div class="flex justify-center">
                   <NuxtImg
                     :src="team.image"
+                    :alt="team.name"
+                    format="webp"
+                    :placeholder="img(team.image, { blur: 2 })"
                     class="rounded-full lg:w-28 lg:h-28 w-16 h-16 object-cover object-top"
                   />
                 </div>
@@ -62,17 +67,18 @@
                   </div>
                 </div>
                 <div class="flex justify-center gap-3 items-center mt-6">
-                  {{ team.social_links }}
                   <div
-                    v-for="(social, index) in team.social"
+                    v-for="(social, index) in team.socail_links"
                     :key="index"
                     class="flex"
                   >
                     <div aria-label="contact team ">
-                      <Icon
-                        class="lg:h-6 lg:w-6 h-4 w-4 text-secondary-2 hover:text-primary"
-                        :name="social.icon"
-                      ></Icon>
+                      <a @click.stop="" :href="social.link" target="_blank">
+                        <Icon
+                          class="lg:h-6 lg:w-6 h-4 w-4 text-secondary-2 hover:text-primary"
+                          :name="social.icon"
+                        ></Icon>
+                      </a>
                     </div>
                   </div></div
               ></NuxtLink>

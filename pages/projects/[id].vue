@@ -33,6 +33,7 @@
        an automated method of matching workers with appropriate vacancy through structured data formats.`,
     },
   ];
+  const img = useImage();
 </script>
 
 <template>
@@ -52,7 +53,8 @@
         <div class="lg:col-span-2">
           <NuxtImg
             :src="image"
-            alt="preview"
+            :alt="title"
+            :provider="img(image, { blur: 2, h: 200 })"
             class="md:h-[340px] object-contain rounded-xl"
           />
         </div>

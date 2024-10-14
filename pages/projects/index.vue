@@ -42,6 +42,7 @@
           collection process.`,
     },
   ]);
+  const img = useImage();
 </script>
 <template>
   <div class="bg-bg-gray dark:bg-bg-primary-dark">
@@ -72,6 +73,8 @@
               <NuxtImg
                 :alt="project.title"
                 :src="project.image"
+                format="webp"
+                :placeholder="img(project.image, { blur: 2 })"
                 class="md:h-[240px] rounded-t-xl object-contain"
               />
             </div>

@@ -71,6 +71,7 @@
       ],
     },
   ]);
+  const img = useImage();
 </script>
 <template>
   <div class="pb-20 bg-bg-gray dark:bg-bg-primary-dark">
@@ -126,6 +127,8 @@
         <NuxtImg
           alt="user-photo"
           :src="team.image"
+          format="webp"
+          :placeholder="img(team.image, { blur: 2 })"
           class="object-contain h-36 w-36 -mt-[20%] sm:-mt-[15%] md:-mt-[15%] lg:-mt-[20%] xl:-mt-[35% rounded-full"
         />
         <div class="font-medium leading-9 text-2xl dark:text-white">

@@ -80,6 +80,7 @@
       src: "/images/home/partners/sida.png",
     },
   ]);
+  const img = useImage();
 </script>
 <template>
   <div id="partners" class="lg:px-24 md:px-10 px-5 w-full">
@@ -103,6 +104,8 @@
             <NuxtImg
               :src="partner.src"
               :alt="partner.name"
+              format="webp"
+              :placeholder="img(partner.src, { blur: 2 })"
               class="object-contain lg:full lg:w-full h-20 w-20"
             />
           </div>

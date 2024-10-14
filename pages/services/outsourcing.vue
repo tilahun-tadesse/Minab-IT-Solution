@@ -24,6 +24,7 @@
           dedicated technical support with little resource expenditure.`,
     },
   ]);
+  const img = useImage();
 </script>
 <template>
   <div class="bg-bg-gray dark:bg-bg-primary-dark">
@@ -53,6 +54,9 @@
       <div class="flex justify-center">
         <NuxtImg
           alt="Outsourcing"
+          :placeholder="
+            img('/images/explore-more/outsourcing.png', { blur: 2 })
+          "
           src="/images/explore-more/outsourcing.png"
           class="h-[549px] w-[549px] max-md:w-[200px] max-md:h-[200px] object-contain"
         />
@@ -72,6 +76,7 @@
         <NuxtImg
           :src="offer.src"
           class="h-16 w-16"
+          :placeholder="img(offer.src, { blur: 2 })"
           alt="icon of Outsourcing software development"
         />
         <div class="font-medium text-2xl dark:text-white">

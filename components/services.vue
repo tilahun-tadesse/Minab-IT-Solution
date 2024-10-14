@@ -22,9 +22,10 @@
     {
       title: "Dta analytics",
 
-      description: ` Minab offers a diverse set of data cleaning. processing and visualizing services to client. 
-      We offer data collection platform or process archived client data to
-      generate insights regarding their bussinesses.`,
+      description: ` Minab offers a diverse set of data cleaning, processing,
+       and visualizing services to clients. 
+      We offer data collection platforms or process archived client
+      data to generate insights regarding their businesses.`,
       to: "/services/outsourcing",
       svg: `<svg width="50" height="50" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="mask0_869_265" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="123" height="123">
@@ -62,6 +63,7 @@
               <div class="w-6/12" v-else>
                 <NuxtImg
                   :src="service.src"
+                  format="webp"
                   alt="Technology Consultancy"
                   :placeholder="img(service.src, { blur: 2 })"
                 />

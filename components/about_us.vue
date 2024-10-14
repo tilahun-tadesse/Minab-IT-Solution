@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+  const img = useImage();
+</script>
 <template>
   <div id="about" class="lg:px-24 md:px-10 px-5 w-full">
     <div class="w-full h-full py-20">
@@ -36,7 +38,7 @@
             <NuxtLink
               to="/about-us"
               class="text-primary-hover lg:text-base text-sm font-body font-medium"
-              >Read more</NuxtLink
+              ><span>Read more</span></NuxtLink
             >
           </div>
         </div>
@@ -47,6 +49,10 @@
             <div>
               <NuxtImg
                 alt="About Us"
+                format="webp"
+                :placeholder="
+                  img('/images/home/minab_about_us.png', { blur: 2 })
+                "
                 src="/images/home/minab_about_us.png"
                 class="h-[549px] w-[549px] object-contain"
               />

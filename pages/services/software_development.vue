@@ -56,6 +56,7 @@
           solutions.`,
     },
   ]);
+  const img = useImage();
 </script>
 <template>
   <div class="bg-bg-gray dark:bg-bg-primary-dark">
@@ -84,6 +85,10 @@
       </div>
       <div class="flex justify-center">
         <NuxtImg
+          format="webp"
+          :placeholder="
+            img('/images/explore-more/software-development.png', { blur: 2 })
+          "
           alt="Software Development"
           src="/images/explore-more/software-development.png"
           class="h-[549px] w-[549px] max-md:h-[300px] max-md:w-[300px] object-contain"

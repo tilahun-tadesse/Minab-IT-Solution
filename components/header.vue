@@ -71,14 +71,17 @@
             <NuxtLink to="/"
               ><NuxtImg
                 class="object-contain h-10 block dark:hidden"
+                format="webp"
+                alt="minab"
                 src="/images/home/logo_main.png"
                 :placeholder="
                   img(`/images/home/logo_main.png`, { blur: 2, h: 200 })
                 "
-                alt="minab"
               />
               <NuxtImg
                 src="/images/home/minab-logo-darkmood.png"
+                alt="minab"
+                format="webp"
                 class="hidden dark:block object-contain h-10"
                 :placeholder="
                   img(`/images/home/minab-logo-darkmood.png`, {

@@ -13,6 +13,8 @@
       >
         <NuxtImg
           alt="Minab Logo"
+          format="webp"
+          :placeholder="img(heroPlaceholder, { blur: 2 })"
           src="/images/home/logo_main.png"
           class="object-contain 2zl:h-52 xl:h-48 lg:h-44 md:h-32 h-20"
         />

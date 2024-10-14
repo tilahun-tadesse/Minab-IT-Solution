@@ -1,6 +1,6 @@
 <script setup>
   const projects = ref([]);
-
+  const img = useImage();
   onMounted(() => {
     projects.value = [
       {
@@ -94,6 +94,9 @@
               <div class="w-[40%] max-xl:w-[100%] flex">
                 <NuxtImg
                   :src="project.image"
+                  :alt="project.title"
+                  format="webp"
+                  :placeholder="img(project.image, { blur: 2 })"
                   class="rounded-xl object-contain"
                 />
               </div>

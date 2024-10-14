@@ -144,17 +144,17 @@
             <div>
               <div class="font-bold dark:text-white mt-6">Share</div>
               <div class="flex gap-3 mt-2">
-                <NuxtLink
+                <a
                   v-for="(share, index) in social_links[1].share"
                   :key="index"
-                  :to="share.to"
+                  :href="share.to"
                   target="_blank"
                 >
                   <Icon
                     class="text-secondary-2 lg:h-6 lg:w-6 h-4 w-4"
                     :name="share.icon"
                   ></Icon>
-                </NuxtLink>
+                </a>
               </div>
             </div>
           </div>
@@ -207,7 +207,7 @@
                 <div class="pt-4">
                   <NuxtLink
                     class="lg:text-base text-sm text-primary-hover font-body font-medium"
-                    to="/project"
+                    to="/projects"
                     >View projects</NuxtLink
                   >
                 </div>
