@@ -57,9 +57,11 @@
     },
   ]);
   const img = useImage();
+  const openModal = ref(false);
 </script>
 <template>
   <div class="bg-bg-gray dark:bg-bg-primary-dark">
+    <ModalBookServices v-model="openModal" v-if="openModal"></ModalBookServices>
     <div
       class="2xl:mb-60 md:mb-10 lg:mb-40 2x:mb-0 px-8 lg:px-[50px] xl:px-[105px] pt-10 lg:pt-40 grid md:grid-cols-2"
     >
@@ -122,7 +124,11 @@
           <p class="text-graytext text-lg">
             {{ offer.description }}
           </p>
-          <div><button class="text-icon font-bold">Book Now</button></div>
+          <div>
+            <button @click="openModal = true" class="text-icon font-bold">
+              Book Now
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -25,9 +25,11 @@
     },
   ]);
   const img = useImage();
+  const openModal = ref(false);
 </script>
 <template>
   <div class="bg-bg-gray dark:bg-bg-primary-dark">
+    <ModalBookServices v-model="openModal" v-if="openModal"></ModalBookServices>
     <div
       class="px-8 lg:px-[50px] xl:px-[105px] max-md:gap-y-5 pt-10 lg:pt-40 grid md:grid-cols-2"
     >
@@ -54,6 +56,7 @@
       <div class="flex justify-center">
         <NuxtImg
           alt="Outsourcing"
+          format="webp"
           :placeholder="
             img('/images/explore-more/outsourcing.png', { blur: 2 })
           "
@@ -85,7 +88,11 @@
         <p class="text-graytext text-lg">
           {{ offer.description }}
         </p>
-        <div><button class="text-icon font-bold">Book Now</button></div>
+        <div>
+          <button @click="openModal = true" class="text-icon font-bold">
+            Book Now
+          </button>
+        </div>
       </div>
     </div>
   </div>

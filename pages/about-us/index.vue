@@ -1,4 +1,5 @@
 <script setup>
+  import { employee } from "~/use/employee";
   const teams = ref([
     {
       image: "/images/home/team/Kaleab_Mezgeb.png",
@@ -72,6 +73,7 @@
     },
   ]);
   const img = useImage();
+  const founder = employee.filter((emp) => emp.founder == true);
 </script>
 <template>
   <div class="pb-20 bg-bg-gray dark:bg-bg-primary-dark">
@@ -120,7 +122,7 @@
       class="grid md:grid-cols-3 gap-32 md:gap-10 lg:gap-32 xl:gap-6 2xl:px-[292px] xl:px-28 px-[15px] mt-40"
     >
       <div
-        v-for="(team, index) in teams"
+        v-for="(team, index) in founder"
         :key="index"
         class="text-center flex flex-col gap-6 place-items-center rounded-md bg-bg-primary dark:bg-bg-secondary-dark px-4 lg:pt-10 pb-10 border border-bg-primary dark:border-bg-secondary-dark hover:border-primary dark:hover:border-purple-3"
       >
@@ -142,14 +144,16 @@
         <p class="leading-9 text-lg text-graytext font-semibold">
           {{ team.description }}
         </p>
-        <div class="flex gap-6">
-          <NuxtLink
-            v-for="({ icon }, index) in team.social_links"
+        <div class="flex gap-6 cursor-pointer">
+          <a
+            v-for="({ icon, link }, index) in team.socail_links"
             :key="index"
+            :href="link"
+            target="_blank"
             class="flex gap-6 text-secondary-2 hover:text-primary duration-200"
           >
             <Icon :name="icon" class="w-8 h-8"> </Icon>
-          </NuxtLink>
+          </a>
         </div>
       </div>
     </div>

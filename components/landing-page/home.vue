@@ -4,8 +4,8 @@
 </script>
 <template>
   <div
-    id="home"
-    class="bg-[url('/images/home/minab_back.png')] h-[570px] sm:h-full object-contain bg-cover relative"
+    id="#"
+    class="bg-[url('/images/home/minab_back.webp')] h-[570px] sm:h-full object-contain bg-cover relative"
   >
     <div class="h-screen justify-center">
       <div

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+   
    app: {
     head: {
       title: "Minab",
@@ -133,8 +134,20 @@ export default defineNuxtConfig({
     '@nuxtjs/leaflet',
     '@vee-validate/nuxt',
      '@nuxt/image',
+     '@nuxtjs/apollo'
+     
     
-   ],
+  ],
+   apollo: {
+    autoImports: true,
+    authType: 'Bearer',
+    authHeader: 'Authorization',
+    tokenStorage: 'cookie',
+    proxyCookies: true,
+     clients: {
+      
+    }
+  },
    veeValidate: {
     autoImports: true, // Enable auto imports for components and composables
     componentNames: {
@@ -160,7 +173,8 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode",
   },
     
- image: {
+  image: {
+  //  provider:'ipx',
   // presets: {
   //     avatar: {
   //       modifiers: {
@@ -169,6 +183,7 @@ export default defineNuxtConfig({
   //         height: 50
   //       }
   //     }
-  //   }
+  // },
+  // format: ['webp','png','jpg'],
 }
 })

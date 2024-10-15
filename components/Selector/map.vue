@@ -42,7 +42,6 @@
           </LPopup>
         </LMarker>
       </LLayerGroup>
-      <
     </LMap>
   </div>
 </template>

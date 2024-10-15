@@ -43,16 +43,16 @@
             <div class="font-bold text-xl p-1 text-black dark:text-white">
               Book Service
             </div>
-            <div class="hover:cursor-pointer pr-5">
+            <div class="hover:cursor-pointer">
               <div
-                class="bg-gray-300 rounded-md flex-1 justify-center items-center h-8 w-8 text-center hover:bg-opacity-30"
+                class="bg-gray-300 rounded-md flex justify-center items-center content-center h-8 w-8 text-center hover:bg-opacity-30"
               >
                 <button
                   @click="openModal = false"
-                  class="flex-1 justify-center items-center"
+                  class="justify-center items-center self-center"
                 >
                   <Icon
-                    class="h-6 w-6 text-black text-center"
+                    class="h-5 w-5 text-black text-center"
                     name="ic:sharp-close"
                   ></Icon>
                 </button>

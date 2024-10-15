@@ -3,39 +3,37 @@
   const head_nav = ref([]);
   const img = useImage();
   const isActive = (link) => {
-    console.log("the page", route.hash);
-    const normalizedLink = link.replace(/^\/+/, "");
-    return route.hash === normalizedLink;
+    return route.hash === link;
   };
   onMounted(() => {
     head_nav.value = [
       {
         title: "Home",
-        to: "/#home",
+        to: "",
       },
       {
         title: "About",
-        to: "/#about",
+        to: "#about",
       },
       {
         title: "Services",
-        to: "/#services",
+        to: "#services",
       },
       {
         title: "Team",
-        to: "/#team",
+        to: "#team",
       },
       {
         title: "Project",
-        to: "/#project",
+        to: "#project",
       },
       {
         title: "Partners",
-        to: "/#partners",
+        to: "#partners",
       },
       {
         title: "Contact",
-        to: "/#contact",
+        to: "#contact",
       },
     ];
   });
@@ -45,7 +43,12 @@
       isActive(newVal);
     }
   );
-
+  // onMounted(() => {
+  //   if (route.path == "/") {
+  //     isActive("/#home");
+  //     console.log(isActive("/#home"));
+  //   }
+  // });
   const showMenu = ref(false);
   watchEffect(() => (showMenu) => {
     console.log(showMenu);
@@ -102,7 +105,7 @@
                 class="flex items-baseline lg:gap-x-10 gap-x-5"
               >
                 <NuxtLink
-                  :to="head_navs.to"
+                  :to="{ path: '/', hash: head_navs.to }"
                   class="text-lg font-body text-primary-lite dark:text-dark-header hover:scale-105 duration-150 hover:text-primary"
                   :class="[
                     'text-lg font-body hover:scale-105 duration-150',
@@ -165,7 +168,7 @@
           class="flex items-baseline lg:gap-x-10 gap-x-5"
         >
           <NuxtLink
-            :to="head_navs.to"
+            :to="{ path: '/', hash: head_navs.to }"
             @click="click()"
             class="text-lg font-body text-primary-lite dark:text-dark-header hover:scale-125 duration-150 hover:text-primary-lite-2"
             :class="[
@@ -181,3 +184,9 @@
     </div>
   </div>
 </template>
+<style>
+  html {
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
+  }
+</style>

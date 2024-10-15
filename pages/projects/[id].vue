@@ -1,4 +1,6 @@
 <script setup>
+  const route = useRoute();
+
   const share = ref([
     {
       icon: "mdi:facebook",
@@ -54,7 +56,7 @@
           <NuxtImg
             :src="image"
             :alt="title"
-            :provider="img(image, { blur: 2, h: 200 })"
+            :placeholder="img(image, { blur: 2, h: 200 })"
             class="md:h-[340px] object-contain rounded-xl"
           />
         </div>
@@ -68,7 +70,7 @@
               v-for="({ icon, title, to }, index) in share"
               class="flex gap-3 mt-2"
             >
-              <NuxtLink :to="to" target="_blank">
+              <NuxtLink @click.stop="" :to="to" target="_blank">
                 <Icon
                   class="h-6 w-6 text-primary dark:text-darkmode-white"
                   :name="icon"

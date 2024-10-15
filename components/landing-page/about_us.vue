@@ -38,7 +38,7 @@
             <NuxtLink
               to="/about-us"
               class="text-primary-hover lg:text-base text-sm font-body font-medium"
-              ><span>Read more</span></NuxtLink
+              ><span>Read more.</span></NuxtLink
             >
           </div>
         </div>

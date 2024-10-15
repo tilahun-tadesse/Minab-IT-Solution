@@ -44,7 +44,9 @@
           proposed automation and development proposals.`,
     },
   ]);
+  const img = useImage();
 </script>
+
 <template>
   <div>
     <ModalBookServices v-if="openModal" v-model="openModal">
@@ -79,6 +81,8 @@
         <div class="flex justify-center">
           <NuxtImg
             alt="Consultancy"
+            format="webp"
+            :placeholder="img(explore.src, { blur: 2 })"
             :src="explore.src"
             class="h-[549px] w-[549px] max-md:h-[300px] max-md:w-[300px] object-contain"
           />

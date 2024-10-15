@@ -4,9 +4,10 @@
   onMounted(() => {
     projects.value = [
       {
+        id: 1,
         image: "/images/home/project/hahu-jobs.png",
         title: "HahuJobs",
-        slug: "hahu-jobs",
+
         description: `HaHuJobs a cloud services operating to capture structured
                     data of the Ethiopian skilled and non-skilled labor market
                     through digitally connecting thousands of job seekers in
@@ -27,6 +28,7 @@
       },
 
       {
+        id: 2,
         image: "/images/home/project/BMS-Banner.png",
         title: "Minab BMS",
         slug: "minab-bms",
@@ -43,6 +45,7 @@
                     infrastructural structures challenges faced in Ethiopia.`,
       },
       {
+        id: 3,
         image: "/images/home/project/minab_dms.png",
         title: " Minab Digital Data Management tool",
         slug: "minab-digital-data-management-tool",
@@ -87,7 +90,7 @@
           :key="index"
           class="w-full group flex flex-col cursor-pointer py-5"
         >
-          <NuxtLink to="/projects"
+          <NuxtLink :to="`/projects/${project.id}`"
             ><div
               class="h-full w-full bg-primary-lite-2 dark:bg-minab-dark-background rounded-xl flex flex-row max-xl:flex-col lg:p-10 px-2 py-2 pb-10 lg:max-h-[340px] border dark:border-minab-dark-section hover:border-primary dark:hover:border-primary-hover"
             >
@@ -117,7 +120,7 @@
                   <div class="invisible group-hover:visible">
                     <NuxtLink
                       class="flex justify-center items-center content-center gap-x-5"
-                      :to="`/projects/${project.slug}`"
+                      :to="`/projects/${project.id}`"
                       ><span class="text-primary dark:text-secondary-navbar">
                         Explore More</span
                       >

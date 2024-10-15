@@ -2,15 +2,16 @@
 <template>
   <div class="mt-0 scroll-mt-10">
     <div class="bg-secondary-1 dark:bg-minab-gray">
-      <Home />
-      <AboutUs></AboutUs>
-      <Services></Services>
-      <Team></Team>
+      <LandingPageHome id="#"></LandingPageHome>
+      <LandingPageAboutUs></LandingPageAboutUs>
+      <LandingPageServices></LandingPageServices>
+      <LandingPageTeam></LandingPageTeam>
     </div>
-    <Project></Project>
+    <LandingPageProject></LandingPageProject>
+
     <div class="bg-secondary-1 dark:bg-minab-gray">
-      <Partners></Partners>
-      <Contact></Contact>
+      <LandingPagePartners></LandingPagePartners>
+      <LandingPageContact></LandingPageContact>
     </div>
   </div>
 </template>
