@@ -51,7 +51,9 @@
   <div>
     <ModalBookServices v-if="openModal" v-model="openModal">
     </ModalBookServices>
-    <div class="bg-bg-gray max-2xl:pt-10 dark:bg-bg-primary-dark w-full">
+    <div
+      class="bg-bg-gray max-2xl:pt-10 dark:bg-bg-primary-dark w-full transition-colors duration-700 ease-in-out"
+    >
       <div
         v-for="(explore, index) in explore_more"
         :key="index"

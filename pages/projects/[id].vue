@@ -39,7 +39,9 @@
 </script>
 
 <template>
-  <div class="bg-bg-gray dark:bg-bg-primary-dark min-h-screen">
+  <div
+    class="bg-bg-gray dark:bg-bg-primary-dark min-h-screen transition-colors duration-700 ease-in-out"
+  >
     <div
       v-for="{ image, title, description } in project"
       class="pt-8 md:pt-20 lg:pt-40 px-6 lg:px-24"

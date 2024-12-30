@@ -28,7 +28,9 @@
   const openModal = ref(false);
 </script>
 <template>
-  <div class="bg-bg-gray dark:bg-bg-primary-dark">
+  <div
+    class="bg-bg-gray dark:bg-bg-primary-dark transition-colors duration-700 ease-in-out"
+  >
     <ModalBookServices v-model="openModal" v-if="openModal"></ModalBookServices>
     <div
       class="px-8 lg:px-[50px] xl:px-[105px] max-md:gap-y-5 pt-10 lg:pt-40 grid md:grid-cols-2"

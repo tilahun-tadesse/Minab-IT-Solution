@@ -13,7 +13,7 @@
   // });
 </script>
 <template>
-  <div class="scroll-smooth">
+  <div class="scroll-smooth transition-colors duration-500 ease-in-out">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

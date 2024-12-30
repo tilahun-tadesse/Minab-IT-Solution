@@ -45,7 +45,9 @@
   const img = useImage();
 </script>
 <template>
-  <div class="bg-bg-gray dark:bg-bg-primary-dark">
+  <div
+    class="bg-bg-gray dark:bg-bg-primary-dark transition-colors duration-700 ease-in-out"
+  >
     <div class="text-center pt-20 lg:pt-40">
       <div
         class="font-extrabold leading-[55px] text-[40px] text-purple-4 dark:text-white"

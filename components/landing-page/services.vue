@@ -53,9 +53,9 @@
       </p>
     </div>
     <div class="text-center px-5 lg:mt-32 md:mt-24 mt-10">
-      <div class="flex max-md:flex-col mt-6 xl:gap-5 sm:gap-10 h-full">
+      <div class="flex max-md:flex-col group mt-6 xl:gap-5 sm:gap-10 h-full">
         <div v-for="(service, index) in services" :key="index">
-          <div class="h-full">
+          <NuxtLink :to="service.to" class="h-full cursor-pointer">
             <div
               class="flex justify-center mx-auto shadow-lg shadow-primary rounded-xl items-center bg-primary max-w-xs flex-wrap w-24 h-24"
             >
@@ -84,7 +84,7 @@
               </p>
             </div>
             <div class="mt-8 lg:mb-2 mb-5">
-              <NuxtLink :to="service.to"
+              <NuxtLink @click.stop="" :to="service.to"
                 ><span
                   class="text-primary-hover font-body font-extrabold text-lg"
                 >
@@ -92,7 +92,7 @@
                 ></NuxtLink
               >
             </div>
-          </div>
+          </NuxtLink>
         </div>
 
         <!--]-->

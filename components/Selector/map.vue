@@ -8,6 +8,7 @@
     LTooltip,
     LLayerGroup,
     LPopup,
+    LControlScale,
   } from "@vue-leaflet/vue-leaflet";
   const zoom = ref();
   const map = ref(null);
@@ -41,6 +42,12 @@
             </div>
           </LPopup>
         </LMarker>
+        <LControlScale
+          position="topright"
+          :imperial="true"
+          :metric="false"
+          updateWhenIdle="true"
+        />
       </LLayerGroup>
     </LMap>
   </div>

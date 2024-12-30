@@ -65,7 +65,7 @@
 </script>
 <template>
   <div
-    class="dark:bg-minab-dark-primary w-full bg-[#ffffff60] dark:bg-opacity-90 bg-opacity-70 sticky py-3 top-0 z-20 shadow backdrop-blur-md"
+    class="dark:bg-minab-dark-primary transition-colors duration-700 ease-in-out w-full bg-[#ffffff60] dark:bg-opacity-90 bg-opacity-70 sticky py-3 top-0 z-20 shadow backdrop-blur-md"
   >
     <div class="mx-auto px-4 sm:px-10 lg:px-10">
       <div class="flex items-center justify-between h-[58px]">

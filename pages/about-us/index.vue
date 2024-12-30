@@ -76,7 +76,9 @@
   const founder = employee.filter((emp) => emp.founder == true);
 </script>
 <template>
-  <div class="pb-20 bg-bg-gray dark:bg-bg-primary-dark">
+  <div
+    class="pb-20 bg-bg-gray dark:bg-bg-primary-dark transition-colors duration-700 ease-in-out"
+  >
     <div
       class="flex pb-14 pt-14 lg:pt-60 justify-center items-end bg-bg-primary dark:bg-bg-secondary-dark class font-extrabold text-3xl lg:text-4xl text-purple-4 border-b-8 border-b-primary dark:text-white"
     >

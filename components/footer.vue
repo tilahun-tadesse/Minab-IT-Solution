@@ -42,7 +42,9 @@
   ]);
 </script>
 <template>
-  <div class="bg-bg-gray dark:bg-bg-primary-dark">
+  <div
+    class="bg-bg-gray dark:bg-bg-primary-dark transition-colors duration-700 ease-in-out"
+  >
     <div class="mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:py-20">
       <div class="h-0.5 bg-gray-400 xl:mx-[292px] mx-[30px]"></div>
       <div
